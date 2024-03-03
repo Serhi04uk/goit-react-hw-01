@@ -1,0 +1,49 @@
+.prof {
+  width: 300px;
+  height: 450px;
+  background-color: rgb(232, 242, 239);
+  border: solid 2px;
+  margin: 0 auto;
+}
+
+li {
+  list-style: none;
+}
+
+.ulList {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.ulList li {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background-color: grey;
+  margin: 0;
+  padding: 0;
+  border-top: 2px solid black;
+}
+
+.divvv {
+  height: 99.8%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.divvv img {
+  border-radius: 50%;
+  background-color: grey;
+}
+
+.secondChild {
+  border-left: 2px solid;
+  border-right: 2px solid;
+}
