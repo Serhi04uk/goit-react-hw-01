@@ -1,27 +1,27 @@
-import css from "./ProfileCSS.module.css";
+import css from "./profile.module.css";
 
-export default function Profile(props) {
+export default function Profile({ name, images, tag, location, stats }) {
   return (
     <div className={css.prof}>
       <div className={css.divvv}>
-        <img src={props.images} alt="User avatar" width={200} />
-        <p>{props.name}</p>
-        <p>{props.tag}</p>
-        <p>{props.location}</p>
+        <img src={images} alt="User avatar" width={200} />
+        <p>{name}</p>
+        <p>{tag}</p>
+        <p>{location}</p>
         <ul className={css.ulList}>
           <li>
             <span>Followers</span>
-            <span>{props.stats.Followers}</span>
+            <span>{stats.followers}</span>
           </li>
 
           <li className={css.secondChild}>
             <span>Views</span>
-            <span>{props.stats.Views}</span>
+            <span>{stats.views}</span>
           </li>
 
           <li>
             <span>Likes</span>
-            <span>{props.stats.Likes}</span>
+            <span>{stats.likes}</span>
           </li>
         </ul>
       </div>

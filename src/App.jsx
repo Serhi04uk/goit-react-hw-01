@@ -1,20 +1,22 @@
-import { useState } from "react";
 import "./App.css";
-import Profile from "./components/Profile";
-import CardAllMarcup from "./components/FriendList";
-import Prof from "./Prof.json";
-import friend from "./FriendsLI.json";
-import transaction from "./Transaction.json";
-import TranAllMarcuk from "./components/TransactionHistory";
+
+import Profile from "./components/Profile/Profile";
+import FriendItem from "./components/Friend/FriendList";
+import TranAllMarcuk from "./components/TransactionHistory/TransactionHistory";
+
+import profile from "./Profile.json";
+import friend from "./FriendList.json";
+import transaction from "./TransactionHistory.json";
+
+const {
+  username,
+  tag,
+  location,
+  avatar,
+  stats: { followers, views, likes },
+} = profile;
 
 function App() {
-  const {
-    username,
-    tag,
-    location,
-    avatar,
-    stats: { followers, views, likes },
-  } = Prof;
   return (
     <>
       <Profile
@@ -22,10 +24,10 @@ function App() {
         tag={tag}
         location={location}
         images={avatar}
-        stats={{ Followers: followers, Views: views, Likes: likes }}
+        stats={{ followers, views, likes }}
       ></Profile>
 
-      <CardAllMarcup friends={friend}></CardAllMarcup>
+      <FriendItem friends={friend}></FriendItem>
 
       <TranAllMarcuk items={transaction} />
     </>

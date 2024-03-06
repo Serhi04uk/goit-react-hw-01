@@ -1,4 +1,4 @@
-import cssTr from "./tran.module.css";
+import cssTr from "./transactionHistory.module.css";
 
 function TransactionHistor({ all }) {
   return all.map((tran, i) => {
