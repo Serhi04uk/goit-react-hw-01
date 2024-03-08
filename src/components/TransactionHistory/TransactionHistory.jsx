@@ -1,18 +1,12 @@
 import cssTr from "./transactionHistory.module.css";
 
-function TransactionHistor({ all }) {
-  return all.map((tran, i) => {
-    return (
-      <tr key={tran.id} className={i % 2 ? cssTr.grey : cssTr.ney}>
-        <td>{tran.type}</td>
-        <td>{tran.amount}</td>
-        <td>{tran.currency}</td>
-      </tr>
-    );
-  });
-}
+// function Transaction({ item, idx }) {
+//   return (
 
-export default function TranAllMarcuk({ items }) {
+//   );
+// }
+
+export default function TransactionHistor({ items }) {
   return (
     <>
       <table>
@@ -25,7 +19,15 @@ export default function TranAllMarcuk({ items }) {
         </thead>
 
         <tbody>
-          <TransactionHistor all={items} />
+          {items.map((item, idx) => {
+            return (
+              <tr key={item.id} className={idx % 2 ? cssTr.grey : cssTr.ney}>
+                <td>{item.type}</td>
+                <td>{item.amount}</td>
+                <td>{item.currency}</td>
+              </tr>
+            );
+          })}
         </tbody>
       </table>
     </>

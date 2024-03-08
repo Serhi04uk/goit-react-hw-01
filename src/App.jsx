@@ -1,7 +1,7 @@
 import "./App.css";
 
 import Profile from "./components/Profile/Profile";
-import FriendItem from "./components/Friend/FriendList";
+import FriendList from "./components/FriendList/FriendList";
 import TranAllMarcuk from "./components/TransactionHistory/TransactionHistory";
 
 import profile from "./Profile.json";
@@ -27,7 +27,7 @@ function App() {
         stats={{ followers, views, likes }}
       ></Profile>
 
-      <FriendItem friends={friend}></FriendItem>
+      <FriendList friends={friend}></FriendList>
 
       <TranAllMarcuk items={transaction} />
     </>
