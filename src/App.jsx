@@ -2,7 +2,7 @@ import "./App.css";
 
 import Profile from "./components/Profile/Profile";
 import FriendList from "./components/FriendList/FriendList";
-import TranAllMarcuk from "./components/TransactionHistory/TransactionHistory";
+import TransactionHistory from "./components/TransactionHistory/TransactionHistory";
 
 import profile from "./Profile.json";
 import friend from "./FriendList.json";
@@ -29,7 +29,7 @@ function App() {
 
       <FriendList friends={friend}></FriendList>
 
-      <TranAllMarcuk items={transaction} />
+      <TransactionHistory items={transaction} />
     </>
   );
 }

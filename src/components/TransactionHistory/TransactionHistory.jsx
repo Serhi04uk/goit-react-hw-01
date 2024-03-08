@@ -1,11 +1,5 @@
 import cssTr from "./transactionHistory.module.css";
 
-// function Transaction({ item, idx }) {
-//   return (
-
-//   );
-// }
-
 export default function TransactionHistor({ items }) {
   return (
     <>
